@@ -7,7 +7,7 @@ const {
 
 const assert = require('assert')
 
-describe('Should check for winners', () => {
+describe('Should check for winners and ties', () => {
   const tieBoard = [null,
     'O', 'O', 'X',
     'X', 'X', 'O',
@@ -52,6 +52,4 @@ describe('Should check for winners', () => {
   it('should not find diagonal winner when there is none', () => {
     assert(checkDiagonalWinner(tieBoard) === false)
   })
-
-
 })

@@ -32,7 +32,7 @@ function checkDiagonalWinner (board) {
     : false
 }
 
-function turn(player){
+function turn(player, num){
   const positionQuery = `${player}'s turn. choose a position 1-9`
   const position = {
     properties: {
@@ -46,7 +46,7 @@ function turn(player){
   prompt.start()
   prompt.get([position], (err, result) => {
     // no writing over squares
-    if(board[result[positionQuery]] === 'X' || board[result[positionQuery]] === 'Y'){
+    if(board[result[positionQuery]] === 'X' || board[result[positionQuery]] === 'O'){
       turn(player)
       return
     }
@@ -61,12 +61,17 @@ function turn(player){
       return
     }
 
-    player = player === 'X' ? 'Y' : 'X'
-    turn(player)
+    if(num === 9){
+      console.log('it\'s a tie game!')
+      return
+    }
+
+    player = player === 'X' ? 'O' : 'X'
+    turn(player, num + 1)
   })
 }
 
-turn('X')
+turn('X', 1)
 
 module.exports = {
   checkDiagonalWinner,
