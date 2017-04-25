@@ -1,0 +1,21 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "A Node tictactoe application",
+  "main": "tictactoe.js",
+  "scripts": {
+    "test": "mocha spec.js",
+    "start": "node tictactoe.js",
+    "lint": "eslint ."
+  },
+  "author": "Ari Leo Frankel",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^3.3.0",
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-plugin-node": "^4.2.2"
+  }
+}
