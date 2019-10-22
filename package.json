@@ -15,7 +15,7 @@
     "prompt": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
+    "eslint": "^6.5.1",
     "eslint-plugin-node": "^4.2.2"
   }
 }
